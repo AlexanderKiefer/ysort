@@ -29,7 +29,6 @@ func move_state():
 	if input_vector != Vector2.ZERO:
 		velocity = velocity.move_toward(input_vector * MAX_SPEED * delta_FPS , ACCELERATION * delta_FPS)
 	else:
-		#animationState.travel("Idle")
 		velocity = velocity.move_toward(Vector2.ZERO, FRICTION * delta_FPS)
 	
 	velocity = move_and_slide(velocity)
