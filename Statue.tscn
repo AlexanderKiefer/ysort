@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://BottomPart.tscn" type="PackedScene" id=1]
+[ext_resource path="res://MiddlePart.tscn" type="PackedScene" id=2]
+[ext_resource path="res://TopPart.tscn" type="PackedScene" id=3]
+
+[node name="Statue" type="YSort"]
+position = Vector2( 0, -6.21 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="TopPart" parent="." instance=ExtResource( 3 )]
+position = Vector2( 0, 2.86102e-06 )
+
+[node name="MiddlePart" parent="." instance=ExtResource( 2 )]
+position = Vector2( -3.8147e-06, 1.90735e-06 )
+
+[node name="BottomPart" parent="." instance=ExtResource( 1 )]

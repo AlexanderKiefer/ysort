@@ -1,12 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://TopPart.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Statue.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Player.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Teil1.png" type="Texture" id=3]
-[ext_resource path="res://MiddlePart.tscn" type="PackedScene" id=4]
-
-[sub_resource type="CapsuleShape2D" id=1]
-height = 12.0694
 
 [node name="Node2D" type="Node2D"]
 
@@ -15,46 +10,8 @@ height = 12.0694
 [node name="Player" parent="YSort" instance=ExtResource( 2 )]
 position = Vector2( 80.6442, 84.3031 )
 
-[node name="Statue" type="YSort" parent="YSort"]
-position = Vector2( 132.276, 138.209 )
-__meta__ = {
-"_edit_group_": true
-}
+[node name="Statue2" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 108.47, 133.186 )
 
-[node name="TopPart" parent="YSort/Statue" instance=ExtResource( 1 )]
-position = Vector2( 0, 2.86102e-06 )
-
-[node name="MiddlePart" parent="YSort/Statue" instance=ExtResource( 4 )]
-position = Vector2( -3.8147e-06, 1.90735e-06 )
-
-[node name="BottomPart" type="StaticBody2D" parent="YSort/Statue"]
-
-[node name="Sprite" type="Sprite" parent="YSort/Statue/BottomPart"]
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Statue/BottomPart"]
-position = Vector2( 0, 5.89102 )
-rotation = 1.5708
-shape = SubResource( 1 )
-
-[node name="Statue2" type="YSort" parent="YSort"]
-position = Vector2( 239.265, 110.737 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="TopPart" parent="YSort/Statue2" instance=ExtResource( 1 )]
-position = Vector2( 0, 2.86102e-06 )
-
-[node name="MiddlePart" parent="YSort/Statue2" instance=ExtResource( 4 )]
-position = Vector2( -3.8147e-06, 1.90735e-06 )
-
-[node name="BottomPart" type="StaticBody2D" parent="YSort/Statue2"]
-
-[node name="Sprite" type="Sprite" parent="YSort/Statue2/BottomPart"]
-texture = ExtResource( 3 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="YSort/Statue2/BottomPart"]
-position = Vector2( 0, 5.89102 )
-rotation = 1.5708
-shape = SubResource( 1 )
+[node name="Statue" parent="YSort" instance=ExtResource( 1 )]
+position = Vector2( 247.35, 113.416 )
